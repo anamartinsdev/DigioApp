@@ -62,5 +62,6 @@ extension ProductListPresenter: ProductListInteractorOutputProtocol {
     
     func didLoadProducts(products: ProductModel) {
         self.model = products
+        viewController?.reloadData()
     }
 }

@@ -71,6 +71,7 @@ final class ProductListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         presenter.getProducts()
         spotlightCollectionView.delegate = self
         spotlightCollectionView.dataSource = self
