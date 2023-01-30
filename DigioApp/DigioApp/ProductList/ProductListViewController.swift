@@ -3,6 +3,16 @@ import UIKit
 final class ProductListViewController: UIViewController {
     
     // MARK: - Views
+    
+    let userTitle: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .title2).bold()
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 1
+        label.textAlignment = .left
+        return label
+    }()
+    
     let spotlightCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -15,24 +25,24 @@ final class ProductListViewController: UIViewController {
         collection.showsHorizontalScrollIndicator = false
         return collection
     }()
-
+    
     let cashTitle: UILabel = {
         let label = UILabel()
-        label.text = ""
+        label.text = "digio Cash"
         label.font = .preferredFont(forTextStyle: .title2).bold()
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 1
         label.textAlignment = .left
         return label
     }()
-
+    
     let bannerImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
+    
     let productTitle: UILabel = {
         let label = UILabel()
         label.text = "Produtos"
@@ -42,7 +52,7 @@ final class ProductListViewController: UIViewController {
         label.textAlignment = .left
         return label
     }()
-
+    
     let productsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -75,7 +85,7 @@ final class ProductListViewController: UIViewController {
         presenter.getProducts()
         spotlightCollectionView.delegate = self
         spotlightCollectionView.dataSource = self
-
+        
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
     }
@@ -83,95 +93,121 @@ final class ProductListViewController: UIViewController {
 
 extension ProductListViewController: ProductListPresenterOutputProtocol {
     func reloadData() {
+        userTitle.text = "Olá \(NSUserName())"
+        
+        
         spotlightCollectionView.reloadData()
         productsCollectionView.reloadData()
+    }
+    
+    func updateBannerImageView(_ imagePath: String) {
+        bannerImageView.downloaded(from: imagePath)
     }
 }
 
 // MARK: - ViewCode
 extension ProductListViewController: ViewConfiguration {
     
-func setupConstraints() {
-    makeSpotlightCollectionConstraints()
-    makeCashTitleConstraints()
-    makeBannerImageConstraints()
-    makeProductTitleConstraints()
-    makeProductCollectionConstraints()
-}
+    func setupConstraints() {
+        makeUserTitleConstraints()
+        makeSpotlightCollectionConstraints()
+        makeCashTitleConstraints()
+        makeBannerImageConstraints()
+        makeProductTitleConstraints()
+        makeProductCollectionConstraints()
+    }
 
-func buildViewHierarchy() {
-    view.addSubview(spotlightCollectionView)
-    view.addSubview(cashTitle)
-    view.addSubview(bannerImageView)
-    view.addSubview(productTitle)
-    view.addSubview(productsCollectionView)
-}
+    func buildViewHierarchy() {
+        view.addSubview(userTitle)
+        view.addSubview(spotlightCollectionView)
+        view.addSubview(cashTitle)
+        view.addSubview(bannerImageView)
+        view.addSubview(productTitle)
+        view.addSubview(productsCollectionView)
+    }
 
-func makeSpotlightCollectionConstraints() {
-    spotlightCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    func makeUserTitleConstraints() {
+        userTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            userTitle.topAnchor.constraint(equalTo: view.topAnchor,
+                                           constant: .init(48).relatedToScreenHeight),
+            userTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                               constant: .init(20).relatedToScrenn),
+            userTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                constant: .init(20).relatedToScrenn),
+            userTitle.heightAnchor.constraint(equalToConstant: 24)
+        ])
+    }
 
-    NSLayoutConstraint.activate([
-        spotlightCollectionView.topAnchor.constraint(equalTo: view.topAnchor,
-                                                constant: .init(80).relatedToScreenHeight),
-        spotlightCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                    constant: .init(20).relatedToScrenn),
-        spotlightCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                    constant: .init(20).relatedToScrenn),
-        spotlightCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.30)
-    ])
-}
+    func makeSpotlightCollectionConstraints() {
+        spotlightCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            spotlightCollectionView.topAnchor.constraint(equalTo: userTitle.bottomAnchor,
+                                                         constant: .init(80).relatedToScreenHeight),
+            spotlightCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                             constant: .init(20).relatedToScrenn),
+            spotlightCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                              constant: .init(20).relatedToScrenn),
+            spotlightCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.30)
+        ])
+    }
 
-func makeCashTitleConstraints() {
-    cashTitle.translatesAutoresizingMaskIntoConstraints = false
+    func makeCashTitleConstraints() {
+        cashTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            cashTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                               constant: .init(20).relatedToScrenn),
+            cashTitle.topAnchor.constraint(equalTo: spotlightCollectionView.bottomAnchor,
+                                           constant: .init(30).relatedToScreenHeight),
+            cashTitle.heightAnchor.constraint(equalToConstant: .init(32).relatedToScreenHeight)
+        ])
+    }
 
-    NSLayoutConstraint.activate([
-        cashTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .init(20).relatedToScrenn),
-        cashTitle.topAnchor.constraint(equalTo: spotlightCollectionView.bottomAnchor,
-                                    constant: .init(30).relatedToScreenHeight),
-        cashTitle.heightAnchor.constraint(equalToConstant: .init(32).relatedToScreenHeight)
-    ])
-}
+    func makeBannerImageConstraints() {
+        bannerImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            bannerImageView.topAnchor.constraint(equalTo: cashTitle.bottomAnchor,
+                                                 constant: .init(32).relatedToScreenHeight),
+            bannerImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                     constant: .init(20).relatedToScrenn),
+            bannerImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.91),
+            bannerImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.15)
+        ])
+        
+        bannerImageView.layer.cornerRadius = 10
+        bannerImageView.clipsToBounds = true
+        
+    }
 
-func makeBannerImageConstraints() {
-    bannerImageView.translatesAutoresizingMaskIntoConstraints = false
+    func makeProductTitleConstraints() {
+        productTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            productTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                  constant: .init(20).relatedToScrenn),
+            productTitle.topAnchor.constraint(equalTo: bannerImageView.bottomAnchor,
+                                              constant: .init(30).relatedToScreenHeight),
+            productTitle.heightAnchor.constraint(equalTo: cashTitle.heightAnchor)
+        ])
+    }
 
-    NSLayoutConstraint.activate([
-        bannerImageView.topAnchor.constraint(equalTo: cashTitle.bottomAnchor,
-                                        constant: .init(20).relatedToScreenHeight),
-        bannerImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .init(20).relatedToScrenn),
-        bannerImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.91),
-        bannerImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.15)
-    ])
-
-    bannerImageView.layer.cornerRadius = 10
-    bannerImageView.clipsToBounds = true
-
-}
-
-func makeProductTitleConstraints() {
-    productTitle.translatesAutoresizingMaskIntoConstraints = false
-
-    NSLayoutConstraint.activate([
-        productTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .init(20).relatedToScrenn),
-        productTitle.topAnchor.constraint(equalTo: bannerImageView.bottomAnchor,
-                                        constant: .init(30).relatedToScreenHeight),
-        productTitle.heightAnchor.constraint(equalTo: cashTitle.heightAnchor)
-    ])
-}
-
-func makeProductCollectionConstraints() {
-    productsCollectionView.translatesAutoresizingMaskIntoConstraints = false
-
-    NSLayoutConstraint.activate([
-        productsCollectionView.topAnchor.constraint(equalTo: productTitle.bottomAnchor,
-                                                constant: .init(20).relatedToScreenHeight),
-        productsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                    constant: .init(20).relatedToScrenn),
-        productsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                    constant: .init(20).relatedToScrenn),
-        productsCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.22)
-    ])
-}
+    func makeProductCollectionConstraints() {
+        productsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            productsCollectionView.topAnchor.constraint(equalTo: productTitle.bottomAnchor,
+                                                        constant: .init(20).relatedToScreenHeight),
+            productsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                            constant: .init(20).relatedToScrenn),
+            productsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                             constant: .init(20).relatedToScrenn),
+            productsCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.22)
+        ])
+    }
 }
 
 extension ProductListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -193,7 +229,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout, UIColle
             }
             let dto = presenter.dtoForSpotlight(index: indexPath.row)
             cell.configure(model: dto)
-
+            
             return cell
         } else if collectionView == productsCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else {
@@ -201,7 +237,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout, UIColle
             }
             let dto = presenter.dtoForProducts(index: indexPath.row)
             cell.configure(model: dto)
-
+            
             return cell
         }
         return UICollectionViewCell()

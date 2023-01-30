@@ -9,6 +9,7 @@ protocol ProductListPresenterInputProtocol: AnyObject {
 
 protocol ProductListPresenterOutputProtocol: AnyObject {
     func reloadData()
+    func updateBannerImageView(_ imagePath: String)
 }
 
 protocol ProductListInteractorInputProtocol: AnyObject {
