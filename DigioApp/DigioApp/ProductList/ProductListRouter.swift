@@ -7,7 +7,8 @@ final class ProductListRouter {
 
 extension ProductListRouter: ProductListRouterProtocol {
     func navigateToDetail(product: ProductsDetail) {
-        let productViewController = ProductViewController(model: product)
+        let configurator = ProductDetailConfigurator()
+        let productViewController = configurator.createModule(model: product)
         viewController?.navigationController?.pushViewController(productViewController, animated: true)
     }
 }

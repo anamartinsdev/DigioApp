@@ -1,6 +1,6 @@
 import UIKit
 
-class ProductCell: UICollectionViewCell {
+final class ProductCell: UICollectionViewCell {
 
     // MARK: - Views
     private let bannerImageView: UIImageView = {

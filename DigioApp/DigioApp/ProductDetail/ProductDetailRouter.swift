@@ -1,5 +1,9 @@
-import Foundation
+import UIKit
 
-class ProductDetailRouter {
+final class ProductDetailRouter {
+    weak var viewController: UIViewController?
+}
+
+extension ProductDetailRouter: ProductDetailRouterProtocol {
     
 }

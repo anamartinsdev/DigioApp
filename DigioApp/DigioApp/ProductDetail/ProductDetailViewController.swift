@@ -1,7 +1,19 @@
-import Foundation
 import UIKit
 
 final class ProductDetailViewController: UIViewController {
+    
+    // MARK: - Views
+
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ProductDetailCell.self,
+                           forCellReuseIdentifier: "\(ProductDetailCell.self)")
+        return tableView
+    }()
+    
     private let presenter: ProductDetailPresenterInputProtocol
     
     init(presenter: ProductDetailPresenterInputProtocol){
@@ -16,10 +28,66 @@ final class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        setupViewConfiguration()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationItem.backButtonTitle = ""
+        presenter.getData()
     }
     
 }
 
 extension ProductDetailViewController: ProductDetailPresenterOutputProtocol {
+    func reloadData() {
+        tableView.reloadData()
+    }
+}
+
+// MARK: - UITableViewDelegate && UITableViewDataSource
+extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layoutIfNeeded()
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailCell.self)", for: indexPath) as? ProductDetailCell else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        cell.configure(imageURL: presenter.getImageURL(),
+                       description: presenter.getDescription())
+        
+        return cell
+    }
+}
+
+// MARK: - ViewCode
+extension ProductDetailViewController: ViewConfiguration {
+    public func setupConstraints() {
+        makeTableViewConstraints()
+    }
+
+    func buildViewHierarchy() {
+        view.addSubview(tableView)
+    }
+
+    func makeTableViewConstraints() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            tableView.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.9),
+            tableView.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.9)
+        ])
+    }
 }

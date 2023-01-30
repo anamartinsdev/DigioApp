@@ -36,8 +36,6 @@
 		A7B5A193298730CC0069FC78 /* ProductDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A173298730CB0069FC78 /* ProductDetailProtocols.swift */; };
 		A7B5A194298730CC0069FC78 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A174298730CB0069FC78 /* ProductDetailPresenter.swift */; };
 		A7B5A195298730CC0069FC78 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A176298730CB0069FC78 /* ProductService.swift */; };
-		A7B5A196298730CC0069FC78 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A179298730CC0069FC78 /* ProductViewController.swift */; };
-		A7B5A197298730CC0069FC78 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A17A298730CC0069FC78 /* ProductView.swift */; };
 		A7B5A198298730CC0069FC78 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A17C298730CC0069FC78 /* ProductCell.swift */; };
 		A7B5A199298730CC0069FC78 /* SpotlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */; };
 		A7B5A19A298730CC0069FC78 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A17F298730CC0069FC78 /* Executor.swift */; };
@@ -46,6 +44,7 @@
 		A7B5A19D298730CC0069FC78 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A182298730CC0069FC78 /* ServiceProvider.swift */; };
 		A7B5A19F298731390069FC78 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A19E298731390069FC78 /* ProductModel.swift */; };
 		A7B5A1A1298731740069FC78 /* ViewConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */; };
+		A7B5A1A329886DC90069FC78 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +99,6 @@
 		A7B5A173298730CB0069FC78 /* ProductDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailProtocols.swift; sourceTree = "<group>"; };
 		A7B5A174298730CB0069FC78 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		A7B5A176298730CB0069FC78 /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
-		A7B5A179298730CC0069FC78 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		A7B5A17A298730CC0069FC78 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		A7B5A17C298730CC0069FC78 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightCell.swift; sourceTree = "<group>"; };
 		A7B5A17F298730CC0069FC78 /* Executor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
@@ -110,6 +107,7 @@
 		A7B5A182298730CC0069FC78 /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		A7B5A19E298731390069FC78 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		A875FBCA4B7E12A27FCDC0DA /* Pods-DigioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioApp.release.xcconfig"; path = "Target Support Files/Pods-DigioApp/Pods-DigioApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +187,6 @@
 				A7B5A16E298730CB0069FC78 /* ProductDetail */,
 				A7B5A160298730CB0069FC78 /* ProductList */,
 				A7B5A175298730CB0069FC78 /* Service */,
-				A7B5A177298730CC0069FC78 /* Views */,
 				A73ACC9A298725FB00961FCA /* AppDelegate.swift */,
 				A73ACC9C298725FB00961FCA /* SceneDelegate.swift */,
 				A73ACC9E298725FB00961FCA /* ViewController.swift */,
@@ -265,28 +262,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		A7B5A177298730CC0069FC78 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A7B5A178298730CC0069FC78 /* ProductView */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A7B5A178298730CC0069FC78 /* ProductView */ = {
-			isa = PBXGroup;
-			children = (
-				A7B5A179298730CC0069FC78 /* ProductViewController.swift */,
-				A7B5A17A298730CC0069FC78 /* ProductView.swift */,
-			);
-			path = ProductView;
-			sourceTree = "<group>";
-		};
 		A7B5A17B298730CC0069FC78 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				A7B5A17C298730CC0069FC78 /* ProductCell.swift */,
 				A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */,
+				A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -460,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B5A19B298730CC0069FC78 /* NetworkLayer.swift in Sources */,
+				A7B5A1A329886DC90069FC78 /* ProductDetailCell.swift in Sources */,
 				A7B5A193298730CC0069FC78 /* ProductDetailProtocols.swift in Sources */,
 				A7B5A189298730CC0069FC78 /* ProductListConfigurator.swift in Sources */,
 				A7B5A186298730CC0069FC78 /* ProductListProtocols.swift in Sources */,
@@ -481,7 +463,6 @@
 				A7B5A18C298730CC0069FC78 /* UIFont.swift in Sources */,
 				A73ACC9F298725FB00961FCA /* ViewController.swift in Sources */,
 				A73ACC9B298725FB00961FCA /* AppDelegate.swift in Sources */,
-				A7B5A197298730CC0069FC78 /* ProductView.swift in Sources */,
 				A7B5A19C298730CC0069FC78 /* Error.swift in Sources */,
 				A73ACC9D298725FB00961FCA /* SceneDelegate.swift in Sources */,
 				A7B5A1A1298731740069FC78 /* ViewConfiguratorProtocol.swift in Sources */,
@@ -490,7 +471,6 @@
 				A7B5A195298730CC0069FC78 /* ProductService.swift in Sources */,
 				A7B5A194298730CC0069FC78 /* ProductDetailPresenter.swift in Sources */,
 				A7B5A18E298730CC0069FC78 /* CGFloat+Extension.swift in Sources */,
-				A7B5A196298730CC0069FC78 /* ProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

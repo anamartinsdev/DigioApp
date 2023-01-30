@@ -131,7 +131,7 @@ extension ProductListViewController: ViewConfiguration {
         
         NSLayoutConstraint.activate([
             userTitle.topAnchor.constraint(equalTo: view.topAnchor,
-                                           constant: .init(48).relatedToScreenHeight),
+                                           constant: .init(42).relatedToScreenHeight),
             userTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                constant: .init(20).relatedToScrenn),
             userTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor,
@@ -145,7 +145,7 @@ extension ProductListViewController: ViewConfiguration {
         
         NSLayoutConstraint.activate([
             spotlightCollectionView.topAnchor.constraint(equalTo: userTitle.bottomAnchor,
-                                                         constant: .init(80).relatedToScreenHeight),
+                                                         constant: .init(32).relatedToScreenHeight),
             spotlightCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                              constant: .init(20).relatedToScrenn),
             spotlightCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor,

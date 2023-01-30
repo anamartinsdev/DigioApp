@@ -1,6 +1,6 @@
 import UIKit
 
-class SpotlightCell: UICollectionViewCell {
+final class SpotlightCell: UICollectionViewCell {
     // MARK: - Model
 
     // MARK: - Views
