@@ -29,12 +29,12 @@ public final class NavigationControllerSpy: UINavigationController {
     
     public private(set) var popToRootViewControllerCalled = false
     public private(set) var popToRootViewControllerAnimatedPassed: Bool?
-    public var popToRootViewControllerViewControllersToBeReturned: [UIViewController]?
+    public var popToRootViewControllerVCsToBeReturned: [UIViewController]?
     
     public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         popToRootViewControllerCalled = true
         popToRootViewControllerAnimatedPassed = animated
-        return popToRootViewControllerViewControllersToBeReturned
+        return popToRootViewControllerVCsToBeReturned
     }
     
     public private(set) var setViewControllersCalled = false
@@ -61,10 +61,10 @@ public final class NavigationControllerSpy: UINavigationController {
     public private(set) var showSenderPassed: Any?
     public private(set) var showViewControllerPassed: UIViewController?
     
-    public override func show(_ vc: UIViewController, sender: Any?) {
+    public override func show(_ viewController: UIViewController, sender: Any?) {
         showViewControllerCalled = true
         showSenderPassed = sender
-        showViewControllerPassed = vc
+        showViewControllerPassed = viewController
     }
     
     public private(set) var popToViewControllerCalled = false
