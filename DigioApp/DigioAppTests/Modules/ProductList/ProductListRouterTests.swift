@@ -10,9 +10,9 @@ final class ProductListRouterTests: XCTestCase {
 
     func test_navigateToDetail() {
         let configurator = ProductListConfigurator()
-        let sceneController = configurator.createModule()
-        sut.viewController = sceneController
+        sut.viewController = configurator.createModule()
+        let navigationControllerSpy = NavigationControllerSpy(rootViewController: sut.viewController!)
         sut.navigateToDetail(product: .init(name: "", imageURL: "", description: ""))
-        XCTAssertEqual(sceneController.navigationController?.viewControllers.count, 2)
+        XCTAssertTrue(navigationControllerSpy.pushViewControllerCalled)
     }
 }

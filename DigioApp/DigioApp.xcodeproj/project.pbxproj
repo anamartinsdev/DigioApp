@@ -20,6 +20,8 @@
 		A73ACCB2298725FD00961FCA /* DigioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACCB1298725FD00961FCA /* DigioAppTests.swift */; };
 		A73ACCBC298725FD00961FCA /* DigioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACCBB298725FD00961FCA /* DigioAppUITests.swift */; };
 		A73ACCBE298725FD00961FCA /* DigioAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACCBD298725FD00961FCA /* DigioAppUITestsLaunchTests.swift */; };
+		A73CB7C32989C75700B53E99 /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73CB7C22989C75700B53E99 /* NavigationControllerSpy.swift */; };
+		A73CB7C62989CEB800B53E99 /* MockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73CB7C52989CEB800B53E99 /* MockExecutor.swift */; };
 		A7B5A183298730CC0069FC78 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A161298730CB0069FC78 /* ProductListRouter.swift */; };
 		A7B5A185298730CC0069FC78 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A163298730CB0069FC78 /* ProductListInteractor.swift */; };
 		A7B5A186298730CC0069FC78 /* ProductListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A164298730CB0069FC78 /* ProductListProtocols.swift */; };
@@ -98,6 +100,8 @@
 		A73ACCB7298725FD00961FCA /* DigioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73ACCBB298725FD00961FCA /* DigioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITests.swift; sourceTree = "<group>"; };
 		A73ACCBD298725FD00961FCA /* DigioAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A73CB7C22989C75700B53E99 /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
+		A73CB7C52989CEB800B53E99 /* MockExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExecutor.swift; sourceTree = "<group>"; };
 		A7B5A161298730CB0069FC78 /* ProductListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
 		A7B5A163298730CB0069FC78 /* ProductListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		A7B5A164298730CB0069FC78 /* ProductListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListProtocols.swift; sourceTree = "<group>"; };
@@ -243,6 +247,14 @@
 			path = DigioAppUITests;
 			sourceTree = "<group>";
 		};
+		A73CB7C42989CEA800B53E99 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A73CB7C52989CEB800B53E99 /* MockExecutor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		A7B5A160298730CB0069FC78 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +369,7 @@
 		A7B5A1AC29889D900069FC78 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				A73CB7C42989CEA800B53E99 /* Mocks */,
 				A7B5A1B029889DB80069FC78 /* Spy */,
 				A7B5A1AE29889DB40069FC78 /* ProductListPresenterTests.swift */,
 				A71EBAD7298975EB00BD8EEC /* ProductListRouterTests.swift */,
@@ -385,6 +398,7 @@
 				A7B5A1B129889F110069FC78 /* ProductListPresenterSpy.swift */,
 				A7B5A1C42988BF760069FC78 /* ProductListInteractorSpy.swift */,
 				A7B5A1C62988C02F0069FC78 /* ProductListRouterSpy.swift */,
+				A73CB7C22989C75700B53E99 /* NavigationControllerSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -653,6 +667,7 @@
 			files = (
 				A7B5A1C32988BC340069FC78 /* ProductDetailCellSnapshotTests.swift in Sources */,
 				A7B5A1B729889F480069FC78 /* ProductDetailPresenterTests.swift in Sources */,
+				A73CB7C62989CEB800B53E99 /* MockExecutor.swift in Sources */,
 				A7B5A1C72988C02F0069FC78 /* ProductListRouterSpy.swift in Sources */,
 				A7B5A1BB2988B6BA0069FC78 /* ProductDetailConfiguratorSpy.swift in Sources */,
 				A71EBAD8298975EB00BD8EEC /* ProductListRouterTests.swift in Sources */,
@@ -664,6 +679,7 @@
 				A7B5A1C12988BB110069FC78 /* ProductDetailImageCellSnapshotTests.swift in Sources */,
 				A7B5A1B529889F3B0069FC78 /* ProductDetailPresenterSpy.swift in Sources */,
 				A71EBADC29897CF500BD8EEC /* ProductListInteractorTests.swift in Sources */,
+				A73CB7C32989C75700B53E99 /* NavigationControllerSpy.swift in Sources */,
 				A7B5A1C52988BF760069FC78 /* ProductListInteractorSpy.swift in Sources */,
 				A73ACCB2298725FD00961FCA /* DigioAppTests.swift in Sources */,
 				A7B5A1BD2988B81A0069FC78 /* ProductDetailViewControllerTests.swift in Sources */,
