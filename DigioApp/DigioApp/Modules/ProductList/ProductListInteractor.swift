@@ -18,7 +18,6 @@ extension ProductListInteractor: ProductListInteractorInputProtocol {
         provider?.load(service: .getProduct, completion: { [weak self] result in
             switch result {
             case .success(let response):
-                print(response)
                 DispatchQueue.main.async { [weak self] in
                     self?.output?.didLoadProducts(products: response)
                 }
