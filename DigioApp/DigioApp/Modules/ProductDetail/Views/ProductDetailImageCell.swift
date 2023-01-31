@@ -7,7 +7,7 @@ final class ProductDetailImageCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "noImage")
+        imageView.image = UIImage(named: "empty")
         return imageView
     }()
 

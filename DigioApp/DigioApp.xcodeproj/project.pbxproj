@@ -10,7 +10,6 @@
 		612A49D29DBA8A24D642BF77 /* Pods_DigioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D3EFDD71746286076FBF23 /* Pods_DigioApp.framework */; };
 		A73ACC9B298725FB00961FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACC9A298725FB00961FCA /* AppDelegate.swift */; };
 		A73ACC9D298725FB00961FCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACC9C298725FB00961FCA /* SceneDelegate.swift */; };
-		A73ACC9F298725FB00961FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACC9E298725FB00961FCA /* ViewController.swift */; };
 		A73ACCA2298725FB00961FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73ACCA0298725FB00961FCA /* Main.storyboard */; };
 		A73ACCA4298725FD00961FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73ACCA3298725FD00961FCA /* Assets.xcassets */; };
 		A73ACCA7298725FD00961FCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73ACCA5298725FD00961FCA /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 		A73ACCBC298725FD00961FCA /* DigioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACCBB298725FD00961FCA /* DigioAppUITests.swift */; };
 		A73ACCBE298725FD00961FCA /* DigioAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACCBD298725FD00961FCA /* DigioAppUITestsLaunchTests.swift */; };
 		A7B5A183298730CC0069FC78 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A161298730CB0069FC78 /* ProductListRouter.swift */; };
-		A7B5A184298730CC0069FC78 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A162298730CB0069FC78 /* ProductListViewModel.swift */; };
 		A7B5A185298730CC0069FC78 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A163298730CB0069FC78 /* ProductListInteractor.swift */; };
 		A7B5A186298730CC0069FC78 /* ProductListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A164298730CB0069FC78 /* ProductListProtocols.swift */; };
 		A7B5A187298730CC0069FC78 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A165298730CB0069FC78 /* ProductListPresenter.swift */; };
@@ -29,10 +27,8 @@
 		A7B5A18C298730CC0069FC78 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A16B298730CB0069FC78 /* UIFont.swift */; };
 		A7B5A18D298730CC0069FC78 /* ViewConfiguration+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A16C298730CB0069FC78 /* ViewConfiguration+Extension.swift */; };
 		A7B5A18E298730CC0069FC78 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A16D298730CB0069FC78 /* CGFloat+Extension.swift */; };
-		A7B5A18F298730CC0069FC78 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A16F298730CB0069FC78 /* ProductDetailRouter.swift */; };
 		A7B5A190298730CC0069FC78 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A170298730CB0069FC78 /* ProductDetailViewController.swift */; };
 		A7B5A191298730CC0069FC78 /* ProductDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A171298730CB0069FC78 /* ProductDetailConfigurator.swift */; };
-		A7B5A192298730CC0069FC78 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A172298730CB0069FC78 /* ProductDetailInteractor.swift */; };
 		A7B5A193298730CC0069FC78 /* ProductDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A173298730CB0069FC78 /* ProductDetailProtocols.swift */; };
 		A7B5A194298730CC0069FC78 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A174298730CB0069FC78 /* ProductDetailPresenter.swift */; };
 		A7B5A195298730CC0069FC78 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A176298730CB0069FC78 /* ProductService.swift */; };
@@ -46,6 +42,10 @@
 		A7B5A1A1298731740069FC78 /* ViewConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */; };
 		A7B5A1A329886DC90069FC78 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */; };
 		A7B5A1A5298891CC0069FC78 /* ProductDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */; };
+		A7B5A1AF29889DB40069FC78 /* ProductListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1AE29889DB40069FC78 /* ProductListPresenterTests.swift */; };
+		A7B5A1B229889F110069FC78 /* ProductListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1B129889F110069FC78 /* ProductListPresenterSpy.swift */; };
+		A7B5A1B529889F3B0069FC78 /* ProductDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1B429889F3B0069FC78 /* ProductDetailPresenterSpy.swift */; };
+		A7B5A1B729889F480069FC78 /* ProductDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1B629889F480069FC78 /* ProductDetailPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		A73ACC97298725FB00961FCA /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73ACC9A298725FB00961FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A73ACC9C298725FB00961FCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A73ACC9E298725FB00961FCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A73ACCA1298725FB00961FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A73ACCA3298725FD00961FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73ACCA6298725FD00961FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +81,6 @@
 		A73ACCBB298725FD00961FCA /* DigioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITests.swift; sourceTree = "<group>"; };
 		A73ACCBD298725FD00961FCA /* DigioAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7B5A161298730CB0069FC78 /* ProductListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
-		A7B5A162298730CB0069FC78 /* ProductListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		A7B5A163298730CB0069FC78 /* ProductListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		A7B5A164298730CB0069FC78 /* ProductListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListProtocols.swift; sourceTree = "<group>"; };
 		A7B5A165298730CB0069FC78 /* ProductListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -93,10 +91,8 @@
 		A7B5A16B298730CB0069FC78 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		A7B5A16C298730CB0069FC78 /* ViewConfiguration+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewConfiguration+Extension.swift"; sourceTree = "<group>"; };
 		A7B5A16D298730CB0069FC78 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
-		A7B5A16F298730CB0069FC78 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		A7B5A170298730CB0069FC78 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		A7B5A171298730CB0069FC78 /* ProductDetailConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailConfigurator.swift; sourceTree = "<group>"; };
-		A7B5A172298730CB0069FC78 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
 		A7B5A173298730CB0069FC78 /* ProductDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailProtocols.swift; sourceTree = "<group>"; };
 		A7B5A174298730CB0069FC78 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		A7B5A176298730CB0069FC78 /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
@@ -110,6 +106,10 @@
 		A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageCell.swift; sourceTree = "<group>"; };
+		A7B5A1AE29889DB40069FC78 /* ProductListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTests.swift; sourceTree = "<group>"; };
+		A7B5A1B129889F110069FC78 /* ProductListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterSpy.swift; sourceTree = "<group>"; };
+		A7B5A1B429889F3B0069FC78 /* ProductDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterSpy.swift; sourceTree = "<group>"; };
+		A7B5A1B629889F480069FC78 /* ProductDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterTests.swift; sourceTree = "<group>"; };
 		A875FBCA4B7E12A27FCDC0DA /* Pods-DigioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioApp.release.xcconfig"; path = "Target Support Files/Pods-DigioApp/Pods-DigioApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,17 +181,12 @@
 		A73ACC99298725FB00961FCA /* DigioApp */ = {
 			isa = PBXGroup;
 			children = (
-				A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */,
-				A7B5A19E298731390069FC78 /* ProductModel.swift */,
-				A7B5A17B298730CC0069FC78 /* Cells */,
+				A7B5A1A929889D450069FC78 /* Utils */,
+				A7B5A1A629889C4E0069FC78 /* Modules */,
 				A7B5A168298730CB0069FC78 /* Extensions */,
 				A7B5A17E298730CC0069FC78 /* Network */,
-				A7B5A16E298730CB0069FC78 /* ProductDetail */,
-				A7B5A160298730CB0069FC78 /* ProductList */,
-				A7B5A175298730CB0069FC78 /* Service */,
 				A73ACC9A298725FB00961FCA /* AppDelegate.swift */,
 				A73ACC9C298725FB00961FCA /* SceneDelegate.swift */,
-				A73ACC9E298725FB00961FCA /* ViewController.swift */,
 				A73ACCA0298725FB00961FCA /* Main.storyboard */,
 				A73ACCA3298725FD00961FCA /* Assets.xcassets */,
 				A73ACCA5298725FD00961FCA /* LaunchScreen.storyboard */,
@@ -203,6 +198,7 @@
 		A73ACCB0298725FD00961FCA /* DigioAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5A1AB29889D860069FC78 /* Modules */,
 				A73ACCB1298725FD00961FCA /* DigioAppTests.swift */,
 			);
 			path = DigioAppTests;
@@ -220,8 +216,9 @@
 		A7B5A160298730CB0069FC78 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5A175298730CB0069FC78 /* Service */,
+				A7B5A1A829889C9E0069FC78 /* Views */,
 				A7B5A161298730CB0069FC78 /* ProductListRouter.swift */,
-				A7B5A162298730CB0069FC78 /* ProductListViewModel.swift */,
 				A7B5A163298730CB0069FC78 /* ProductListInteractor.swift */,
 				A7B5A164298730CB0069FC78 /* ProductListProtocols.swift */,
 				A7B5A165298730CB0069FC78 /* ProductListPresenter.swift */,
@@ -246,10 +243,9 @@
 		A7B5A16E298730CB0069FC78 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A7B5A16F298730CB0069FC78 /* ProductDetailRouter.swift */,
+				A7B5A1A729889C900069FC78 /* Views */,
 				A7B5A170298730CB0069FC78 /* ProductDetailViewController.swift */,
 				A7B5A171298730CB0069FC78 /* ProductDetailConfigurator.swift */,
-				A7B5A172298730CB0069FC78 /* ProductDetailInteractor.swift */,
 				A7B5A173298730CB0069FC78 /* ProductDetailProtocols.swift */,
 				A7B5A174298730CB0069FC78 /* ProductDetailPresenter.swift */,
 			);
@@ -264,17 +260,6 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		A7B5A17B298730CC0069FC78 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				A7B5A17C298730CC0069FC78 /* ProductCell.swift */,
-				A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */,
-				A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */,
-				A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		A7B5A17E298730CC0069FC78 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +269,93 @@
 				A7B5A182298730CC0069FC78 /* ServiceProvider.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A7B5A1A629889C4E0069FC78 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1AA29889D590069FC78 /* Model */,
+				A7B5A16E298730CB0069FC78 /* ProductDetail */,
+				A7B5A160298730CB0069FC78 /* ProductList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A7B5A1A729889C900069FC78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */,
+				A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7B5A1A829889C9E0069FC78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A17C298730CC0069FC78 /* ProductCell.swift */,
+				A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7B5A1A929889D450069FC78 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A7B5A1AA29889D590069FC78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A19E298731390069FC78 /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A7B5A1AB29889D860069FC78 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1AD29889D980069FC78 /* ProductDetail */,
+				A7B5A1AC29889D900069FC78 /* ProductList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A7B5A1AC29889D900069FC78 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1B029889DB80069FC78 /* Spy */,
+				A7B5A1AE29889DB40069FC78 /* ProductListPresenterTests.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		A7B5A1AD29889D980069FC78 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1B329889F250069FC78 /* Spy */,
+				A7B5A1B629889F480069FC78 /* ProductDetailPresenterTests.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		A7B5A1B029889DB80069FC78 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1B129889F110069FC78 /* ProductListPresenterSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		A7B5A1B329889F250069FC78 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5A1B429889F3B0069FC78 /* ProductDetailPresenterSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,21 +523,17 @@
 				A7B5A188298730CC0069FC78 /* ProductListViewController.swift in Sources */,
 				A7B5A18B298730CC0069FC78 /* UIImage+Extensions.swift in Sources */,
 				A7B5A19D298730CC0069FC78 /* ServiceProvider.swift in Sources */,
-				A7B5A192298730CC0069FC78 /* ProductDetailInteractor.swift in Sources */,
 				A7B5A183298730CC0069FC78 /* ProductListRouter.swift in Sources */,
 				A7B5A187298730CC0069FC78 /* ProductListPresenter.swift in Sources */,
-				A7B5A184298730CC0069FC78 /* ProductListViewModel.swift in Sources */,
 				A7B5A185298730CC0069FC78 /* ProductListInteractor.swift in Sources */,
 				A7B5A19A298730CC0069FC78 /* Executor.swift in Sources */,
 				A7B5A1A5298891CC0069FC78 /* ProductDetailImageCell.swift in Sources */,
 				A7B5A18A298730CC0069FC78 /* UIImageView+Extension.swift in Sources */,
-				A7B5A18F298730CC0069FC78 /* ProductDetailRouter.swift in Sources */,
 				A7B5A198298730CC0069FC78 /* ProductCell.swift in Sources */,
 				A7B5A190298730CC0069FC78 /* ProductDetailViewController.swift in Sources */,
 				A7B5A199298730CC0069FC78 /* SpotlightCell.swift in Sources */,
 				A7B5A19F298731390069FC78 /* ProductModel.swift in Sources */,
 				A7B5A18C298730CC0069FC78 /* UIFont.swift in Sources */,
-				A73ACC9F298725FB00961FCA /* ViewController.swift in Sources */,
 				A73ACC9B298725FB00961FCA /* AppDelegate.swift in Sources */,
 				A7B5A19C298730CC0069FC78 /* Error.swift in Sources */,
 				A73ACC9D298725FB00961FCA /* SceneDelegate.swift in Sources */,
@@ -482,6 +550,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B5A1B729889F480069FC78 /* ProductDetailPresenterTests.swift in Sources */,
+				A7B5A1AF29889DB40069FC78 /* ProductListPresenterTests.swift in Sources */,
+				A7B5A1B229889F110069FC78 /* ProductListPresenterSpy.swift in Sources */,
+				A7B5A1B529889F3B0069FC78 /* ProductDetailPresenterSpy.swift in Sources */,
 				A73ACCB2298725FD00961FCA /* DigioAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

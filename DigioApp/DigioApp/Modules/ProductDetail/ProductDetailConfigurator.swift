@@ -6,14 +6,9 @@ protocol ProductDetailConfiguratorProtocol: AnyObject {
 
 final class ProductDetailConfigurator: ProductDetailConfiguratorProtocol {
     func createModule(model: ProductsDetail) -> UIViewController {
-        let router = ProductDetailRouter()
-        let interactor = ProductDetailInteractor()
-        let presenter = ProductDetailPresenter(router: router, interactor: interactor)
-        interactor.output = presenter
+        let presenter = ProductDetailPresenter(model: model)
         let viewController = ProductDetailViewController(presenter: presenter)
         presenter.viewController = viewController
-        presenter.model = model
-        router.viewController = viewController
         
         return viewController
     }

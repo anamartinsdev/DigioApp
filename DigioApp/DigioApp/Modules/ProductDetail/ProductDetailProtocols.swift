@@ -7,17 +7,3 @@ protocol ProductDetailPresenterInputProtocol: AnyObject {
 protocol ProductDetailPresenterOutputProtocol: AnyObject {
     func reloadData()
 }
-
-protocol ProductDetailInteractorInputProtocol: AnyObject {
-    
-}
-
-protocol ProductDetailInteractorOutputProtocol: AnyObject {
-    
-}
-
-protocol ProductDetailRouterProtocol: AnyObject {
-    
-}
-
-
