@@ -7,6 +7,7 @@ final class ProductListViewController: UIViewController {
     let userTitle: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2).bold()
+        label.textColor = UIColor(named: "thirdColor")
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 1
         label.textAlignment = .left
@@ -28,11 +29,16 @@ final class ProductListViewController: UIViewController {
     
     let cashTitle: UILabel = {
         let label = UILabel()
-        label.text = "digio Cash"
-        label.font = .preferredFont(forTextStyle: .title2).bold()
-        label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 1
-        label.textAlignment = .left
+        label.textColor = UIColor(named: "primaryColor")
+        let attributedString = NSMutableAttributedString(string: "digio Cash",
+                                                         attributes: [.font: UIFont.boldSystemFont(ofSize: 16)])
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor,
+                                      value: UIColor(named: "primaryColor")!,
+                                      range: NSRange(location: 0, length: 5))
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor,
+                                      value: UIColor(named: "secundaryColor")!,
+                                      range: NSRange(location: 5, length: 5))
+        label.attributedText = attributedString
         return label
     }()
     
@@ -46,6 +52,7 @@ final class ProductListViewController: UIViewController {
     let productTitle: UILabel = {
         let label = UILabel()
         label.text = "Produtos"
+        label.textColor = UIColor(named: "primaryColor")
         label.font = .preferredFont(forTextStyle: .title2).bold()
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 1

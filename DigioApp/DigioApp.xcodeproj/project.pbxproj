@@ -45,6 +45,7 @@
 		A7B5A19F298731390069FC78 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A19E298731390069FC78 /* ProductModel.swift */; };
 		A7B5A1A1298731740069FC78 /* ViewConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */; };
 		A7B5A1A329886DC90069FC78 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */; };
+		A7B5A1A5298891CC0069FC78 /* ProductDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		A7B5A19E298731390069FC78 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A7B5A1A0298731740069FC78 /* ViewConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
+		A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageCell.swift; sourceTree = "<group>"; };
 		A875FBCA4B7E12A27FCDC0DA /* Pods-DigioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioApp.release.xcconfig"; path = "Target Support Files/Pods-DigioApp/Pods-DigioApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,6 +270,7 @@
 				A7B5A17C298730CC0069FC78 /* ProductCell.swift */,
 				A7B5A17D298730CC0069FC78 /* SpotlightCell.swift */,
 				A7B5A1A229886DC90069FC78 /* ProductDetailCell.swift */,
+				A7B5A1A4298891CC0069FC78 /* ProductDetailImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				A7B5A184298730CC0069FC78 /* ProductListViewModel.swift in Sources */,
 				A7B5A185298730CC0069FC78 /* ProductListInteractor.swift in Sources */,
 				A7B5A19A298730CC0069FC78 /* Executor.swift in Sources */,
+				A7B5A1A5298891CC0069FC78 /* ProductDetailImageCell.swift in Sources */,
 				A7B5A18A298730CC0069FC78 /* UIImageView+Extension.swift in Sources */,
 				A7B5A18F298730CC0069FC78 /* ProductDetailRouter.swift in Sources */,
 				A7B5A198298730CC0069FC78 /* ProductCell.swift in Sources */,

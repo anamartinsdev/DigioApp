@@ -1,15 +1,14 @@
 import UIKit
 
-final class ProductDetailCell: UITableViewCell {
+final class ProductDetailImageCell: UITableViewCell {
 
     // MARK: - Views
-    private lazy var productDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .subheadline).bold()
-        label.numberOfLines = 0
-        label.textAlignment = .justified
-        label.textColor = UIColor(named: "thirdColor")
-        return label
+    private lazy var productImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .clear
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "noImage")
+        return imageView
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -22,8 +21,6 @@ final class ProductDetailCell: UITableViewCell {
     }
 
     override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         setupViewConfiguration()
         setUpAditionalConfiguration()
         backgroundColor = .white
@@ -33,28 +30,28 @@ final class ProductDetailCell: UITableViewCell {
                 ).cgPath
     }
     
-    func configure(description: String) {
-        productDescriptionLabel.text = description
+    func configure(imageURL: String) {
+        productImageView.downloaded(from: imageURL)
     }
 }
     // MARK: - ViewCode
-extension ProductDetailCell: ViewConfiguration {
+extension ProductDetailImageCell: ViewConfiguration {
     public func setupConstraints() {
-        makeProductDescriptionConstraints()
+        makeProductImageViewConstraints()
     }
 
-    func makeProductDescriptionConstraints() {
-        productDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+    func makeProductImageViewConstraints() {
+        productImageView.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
-            productDescriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            productDescriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            productDescriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            productImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            productImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            productImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.10)
         ])
     }
 
     func buildViewHierarchy() {
-        contentView.addSubview(productDescriptionLabel)
+        contentView.addSubview(productImageView)
     }
 
     func setUpAditionalConfiguration() {
@@ -73,4 +70,3 @@ extension ProductDetailCell: ViewConfiguration {
         layer.rasterizationScale = UIScreen.main.scale
     }
 }
-

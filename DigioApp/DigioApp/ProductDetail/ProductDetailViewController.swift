@@ -11,6 +11,8 @@ final class ProductDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(ProductDetailCell.self,
                            forCellReuseIdentifier: "\(ProductDetailCell.self)")
+        tableView.register(ProductDetailImageCell.self,
+                           forCellReuseIdentifier: "\(ProductDetailImageCell.self)")
         return tableView
     }()
     
@@ -48,11 +50,15 @@ extension ProductDetailViewController: ProductDetailPresenterOutputProtocol {
 // MARK: - UITableViewDelegate && UITableViewDataSource
 extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if indexPath.row == 0 {
+            return 140
+        } else {
+            return 400
+        }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -60,14 +66,23 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailCell.self)", for: indexPath) as? ProductDetailCell else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailImageCell.self)", for: indexPath) as? ProductDetailImageCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            cell.configure(imageURL: presenter.getImageURL())
+            
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailCell.self)", for: indexPath) as? ProductDetailCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            cell.configure(description: presenter.getDescription())
+            
+            return cell
         }
-        cell.selectionStyle = .none
-        cell.configure(imageURL: presenter.getImageURL(),
-                       description: presenter.getDescription())
-        
-        return cell
     }
 }
 
