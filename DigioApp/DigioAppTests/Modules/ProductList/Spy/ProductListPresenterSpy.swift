@@ -28,7 +28,6 @@ final class ProductListPresenterInputProtocolSpy: ProductListPresenterInputProto
     func didSelectItemAt(index: Int) {
         calledMethods.append(.didSelectItemAt(index: index))
     }
-    
 
     enum CalledMethods: Equatable {
         case getProducts

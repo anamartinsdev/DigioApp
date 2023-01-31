@@ -13,7 +13,7 @@ final class ProductDetailViewControllerTests: XCTestCase {
         sut = ProductDetailViewController(presenter: presenterSpy)
         
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
         sut.viewDidLoad()
@@ -24,7 +24,7 @@ final class ProductDetailViewControllerTests: XCTestCase {
         sut = ProductDetailViewController(presenter: presenterSpy)
         
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
 

@@ -2,7 +2,6 @@ import UIKit
 
 final class ProductListRouter {
     weak var viewController: UIViewController?
-    
 }
 
 extension ProductListRouter: ProductListRouterProtocol {

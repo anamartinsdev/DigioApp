@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		043F209E68DA0BC014676B76 /* Pods_DigioAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861E2436203C2EEF6D38EE96 /* Pods_DigioAppTests.framework */; };
 		612A49D29DBA8A24D642BF77 /* Pods_DigioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D3EFDD71746286076FBF23 /* Pods_DigioApp.framework */; };
+		A71EBAD8298975EB00BD8EEC /* ProductListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EBAD7298975EB00BD8EEC /* ProductListRouterTests.swift */; };
+		A71EBADA2989780100BD8EEC /* ProductListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EBAD92989780100BD8EEC /* ProductListViewControllerTests.swift */; };
+		A71EBADC29897CF500BD8EEC /* ProductListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EBADB29897CF500BD8EEC /* ProductListInteractorTests.swift */; };
 		A73ACC9B298725FB00961FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACC9A298725FB00961FCA /* AppDelegate.swift */; };
 		A73ACC9D298725FB00961FCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73ACC9C298725FB00961FCA /* SceneDelegate.swift */; };
 		A73ACCA2298725FB00961FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73ACCA0298725FB00961FCA /* Main.storyboard */; };
@@ -80,6 +83,9 @@
 		3E8F078065203F9D032A2649 /* Pods-DigioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioApp.debug.xcconfig"; path = "Target Support Files/Pods-DigioApp/Pods-DigioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		861E2436203C2EEF6D38EE96 /* Pods_DigioAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigioAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9501F676ED4756065A19B308 /* Pods-DigioAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioAppTests.release.xcconfig"; path = "Target Support Files/Pods-DigioAppTests/Pods-DigioAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A71EBAD7298975EB00BD8EEC /* ProductListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouterTests.swift; sourceTree = "<group>"; };
+		A71EBAD92989780100BD8EEC /* ProductListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTests.swift; sourceTree = "<group>"; };
+		A71EBADB29897CF500BD8EEC /* ProductListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractorTests.swift; sourceTree = "<group>"; };
 		A73ACC97298725FB00961FCA /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73ACC9A298725FB00961FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A73ACC9C298725FB00961FCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -353,6 +359,9 @@
 			children = (
 				A7B5A1B029889DB80069FC78 /* Spy */,
 				A7B5A1AE29889DB40069FC78 /* ProductListPresenterTests.swift */,
+				A71EBAD7298975EB00BD8EEC /* ProductListRouterTests.swift */,
+				A71EBAD92989780100BD8EEC /* ProductListViewControllerTests.swift */,
+				A71EBADB29897CF500BD8EEC /* ProductListInteractorTests.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -646,12 +655,15 @@
 				A7B5A1B729889F480069FC78 /* ProductDetailPresenterTests.swift in Sources */,
 				A7B5A1C72988C02F0069FC78 /* ProductListRouterSpy.swift in Sources */,
 				A7B5A1BB2988B6BA0069FC78 /* ProductDetailConfiguratorSpy.swift in Sources */,
+				A71EBAD8298975EB00BD8EEC /* ProductListRouterTests.swift in Sources */,
 				A7B5A1BF2988B8310069FC78 /* ProductDetailViewControllerSpy.swift in Sources */,
 				A7B5A1B92988B6B00069FC78 /* ProductDetailConfiguratorTests.swift in Sources */,
+				A71EBADA2989780100BD8EEC /* ProductListViewControllerTests.swift in Sources */,
 				A7B5A1AF29889DB40069FC78 /* ProductListPresenterTests.swift in Sources */,
 				A7B5A1B229889F110069FC78 /* ProductListPresenterSpy.swift in Sources */,
 				A7B5A1C12988BB110069FC78 /* ProductDetailImageCellSnapshotTests.swift in Sources */,
 				A7B5A1B529889F3B0069FC78 /* ProductDetailPresenterSpy.swift in Sources */,
+				A71EBADC29897CF500BD8EEC /* ProductListInteractorTests.swift in Sources */,
 				A7B5A1C52988BF760069FC78 /* ProductListInteractorSpy.swift in Sources */,
 				A73ACCB2298725FD00961FCA /* DigioAppTests.swift in Sources */,
 				A7B5A1BD2988B81A0069FC78 /* ProductDetailViewControllerTests.swift in Sources */,

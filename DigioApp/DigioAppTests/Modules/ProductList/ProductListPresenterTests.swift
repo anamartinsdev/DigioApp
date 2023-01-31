@@ -16,7 +16,7 @@ final class ProductListPresenterTests: XCTestCase {
         sut = ProductListPresenter(router: routerSpy, interactor: interactorSpy)
         sut.viewController = viewControllerSpy
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
 
@@ -28,7 +28,7 @@ final class ProductListPresenterTests: XCTestCase {
         sut = ProductListPresenter(router: routerSpy, interactor: interactorSpy)
         sut.viewController = viewControllerSpy
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
 
@@ -40,7 +40,7 @@ final class ProductListPresenterTests: XCTestCase {
         sut = ProductListPresenter(router: routerSpy, interactor: interactorSpy)
         sut.viewController = viewControllerSpy
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
         sut.didLoadProducts(products: makeResponse())

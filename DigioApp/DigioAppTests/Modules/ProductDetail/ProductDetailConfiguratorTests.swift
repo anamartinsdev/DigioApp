@@ -11,7 +11,7 @@ final class ProductDetailConfiguratorTests: XCTestCase {
     func test_getData() {
         sut = ProductDetailConfigurator()
         guard let sut = sut else {
-            XCTFail()
+            XCTFail("Sut could not be nil")
             return
         }
 

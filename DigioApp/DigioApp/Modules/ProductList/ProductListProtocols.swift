@@ -3,7 +3,7 @@ protocol ProductListPresenterInputProtocol: AnyObject {
     func numberOfItemsInSpotlightSection() -> Int
     func numberOfItemsInProductsSection() -> Int
     func dtoForSpotlight(index: Int) -> ProductsSpotlight
-    func dtoForProducts(index: Int) ->  ProductsDetail
+    func dtoForProducts(index: Int) -> ProductsDetail
     func didSelectItemAt(index: Int) 
 }
 
@@ -24,6 +24,3 @@ protocol ProductListInteractorOutputProtocol: AnyObject {
 protocol ProductListRouterProtocol: AnyObject {
     func navigateToDetail(product: ProductsDetail)
 }
-
-
-

@@ -18,7 +18,7 @@ final class ProductDetailViewController: UIViewController {
     
     private let presenter: ProductDetailPresenterInputProtocol
     
-    init(presenter: ProductDetailPresenterInputProtocol){
+    init(presenter: ProductDetailPresenterInputProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -67,7 +67,8 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailImageCell.self)", for: indexPath) as? ProductDetailImageCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailImageCell.self)",
+                                                           for: indexPath) as? ProductDetailImageCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
@@ -75,7 +76,8 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             
             return cell
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailCell.self)", for: indexPath) as? ProductDetailCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductDetailCell.self)",
+                                                           for: indexPath) as? ProductDetailCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none

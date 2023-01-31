@@ -11,8 +11,7 @@ final class ProductDetailCellSnapshotTests: XCTestCase {
                                     as: .image,
                                     named: "Default",
                                     testName: "ProductDetailCell")
-        
-        
+
         XCTAssertNil(result)
     }
 }

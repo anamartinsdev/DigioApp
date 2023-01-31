@@ -73,4 +73,3 @@ extension ProductDetailCell: ViewConfiguration {
         layer.rasterizationScale = UIScreen.main.scale
     }
 }
-

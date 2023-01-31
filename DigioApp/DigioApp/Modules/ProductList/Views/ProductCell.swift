@@ -64,4 +64,3 @@ extension ProductCell {
         String(describing: self)
     }
 }
-

@@ -56,4 +56,3 @@ extension SpotlightCell {
         String(describing: self)
     }
 }
-

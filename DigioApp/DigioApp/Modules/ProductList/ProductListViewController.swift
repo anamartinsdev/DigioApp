@@ -4,7 +4,7 @@ final class ProductListViewController: UIViewController {
     
     // MARK: - Views
     
-    let userTitle: UILabel = {
+    private lazy var userTitle: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2).bold()
         label.textColor = UIColor(named: "thirdColor")
@@ -14,7 +14,7 @@ final class ProductListViewController: UIViewController {
         return label
     }()
     
-    let spotlightCollectionView: UICollectionView = {
+    private lazy var spotlightCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 5
@@ -27,7 +27,7 @@ final class ProductListViewController: UIViewController {
         return collection
     }()
     
-    let cashTitle: UILabel = {
+    private lazy var cashTitle: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(named: "primaryColor")
         let attributedString = NSMutableAttributedString(string: "digio Cash",
@@ -42,14 +42,14 @@ final class ProductListViewController: UIViewController {
         return label
     }()
     
-    let bannerImageView: UIImageView = {
+    private lazy var bannerImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    let productTitle: UILabel = {
+    private lazy var productTitle: UILabel = {
         let label = UILabel()
         label.text = "Produtos"
         label.textColor = UIColor(named: "primaryColor")
@@ -60,7 +60,7 @@ final class ProductListViewController: UIViewController {
         return label
     }()
     
-    let productsCollectionView: UICollectionView = {
+    private lazy var productsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 20
@@ -101,8 +101,6 @@ final class ProductListViewController: UIViewController {
 extension ProductListViewController: ProductListPresenterOutputProtocol {
     func reloadData() {
         userTitle.text = "Olá \(NSUserName())"
-        
-        
         spotlightCollectionView.reloadData()
         productsCollectionView.reloadData()
     }
@@ -231,7 +229,8 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout, UIColle
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == spotlightCollectionView {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCell.reuseIdentifier, for: indexPath) as? SpotlightCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCell.reuseIdentifier,
+                                                                for: indexPath) as? SpotlightCell else {
                 return UICollectionViewCell()
             }
             let dto = presenter.dtoForSpotlight(index: indexPath.row)
@@ -239,7 +238,8 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout, UIColle
             
             return cell
         } else if collectionView == productsCollectionView {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier,
+                                                                for: indexPath) as? ProductCell else {
                 return UICollectionViewCell()
             }
             let dto = presenter.dtoForProducts(index: indexPath.row)
@@ -262,4 +262,3 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout, UIColle
         return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     }
 }
-

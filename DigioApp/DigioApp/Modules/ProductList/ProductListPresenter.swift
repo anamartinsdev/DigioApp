@@ -40,7 +40,7 @@ extension ProductListPresenter: ProductListPresenterInputProtocol {
         return model.spotlight[index]
     }
     
-    func dtoForProducts(index: Int) ->  ProductsDetail {
+    func dtoForProducts(index: Int) -> ProductsDetail {
         guard let model = model else {
             return .init(name: "", imageURL: "", description: "")
         }
