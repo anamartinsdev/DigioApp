@@ -48,10 +48,10 @@ extension ProductListPresenter: ProductListPresenterInputProtocol {
     }
     
     func didSelectItemAt(index: Int) {
-        guard let model = model else {
+        guard let index = model?.products[index] else {
             return
         }
-        router.navigateToDetail(product: model.products[index])
+        router.navigateToDetail(product: index)
     }
 }
 

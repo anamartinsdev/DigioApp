@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: f4c4cf9eb9384763588e752aa8f33e0a38eb0596
+PODS:
+  - SnapshotTesting (1.8.2)
+
+DEPENDENCIES:
+  - SnapshotTesting (~> 1.8.1)
+
+SPEC REPOS:
+  trunk:
+    - SnapshotTesting
+
+SPEC CHECKSUMS:
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
+
+PODFILE CHECKSUM: ca3c0d30f154699be25e7969b1e3db1fc14c2acb
 
 COCOAPODS: 1.11.3
