@@ -1,0 +1,12 @@
+platform :ios, '12.0'
+use_frameworks!
+target 'DigioApp' do
+
+end
+
+target 'DigioAppTests' do
+  inherit! :search_paths
+  # Pods for testing
+  pod 'SnapshotTesting', '~> 1.8.1'
+  pod 'SwiftLint'
+end

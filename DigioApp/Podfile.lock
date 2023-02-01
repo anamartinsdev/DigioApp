@@ -1,0 +1,20 @@
+PODS:
+  - SnapshotTesting (1.8.2)
+  - SwiftLint (0.50.3)
+
+DEPENDENCIES:
+  - SnapshotTesting (~> 1.8.1)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - SnapshotTesting
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
+  SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
+
+PODFILE CHECKSUM: 8f64209a0be7ab1bb172c7d59fc6192fb0c6dcbe
+
+COCOAPODS: 1.11.3
